@@ -45,7 +45,7 @@
 .row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -57,33 +57,32 @@ ion-button {
   --background: #FFBE33;
   --color-activated: #FFBE33;
   --background-activated: #ffffff;
+  --background-hover: #ffc750;
   font-weight: bold;
 }
 
 .longButton {
-  width: 43.5vw;
+  width: 44vw;
 }
 
 //Für den Simulator, falls die Bildschirmbreite mehr als 500px beträgt, dann wird der Taschenrechner nicht mehr vergrößert.
-@media screen and (min-width: 500px) {
+@media (min-width: 500px) {
   .display {
     font-size: 115px;
     text-align: center;
+    margin-right: auto;
+    margin-left: 350px;
   }
   
   .row {
-    display: flex;
     justify-content: center;
-  }
-
-  .row ion-button {
-    margin-right: 20px;
   }
 
   ion-button {
     width: 100px;
     height: 100px;
     font-size: 30px;
+    margin-right: 20px;
   }
 
   .longButton {
