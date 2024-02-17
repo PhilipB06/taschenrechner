@@ -12,17 +12,17 @@ export class HomePage {
   constructor() {
   }
 
-   click(input: any) {
-    if (this.display === '0' && input === '.') {
+   click(input: string) {
+    if (this.display == '0' && input == '.') {
       this.display += input;
       this.newInput = false;
-    } else if (this.display === '0' || this.display === 'Fehler' || +this.display === Number.POSITIVE_INFINITY) {
+    } else if (this.display == '0' || this.display == 'Fehler' || +this.display == Number.POSITIVE_INFINITY) {
       this.display = input;
       this.newInput=false;
     } else if (this.newInput && ['+', '-', '*', '/'].includes(input)) {
       this.display += input;
       this.newInput = false;
-    } else if (this.newInput && input === '.') {
+    } else if (this.newInput && input == '.') {
       this.display = '0' + input;
       this.newInput = false;
     } else if (this.newInput) {
