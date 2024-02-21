@@ -16,14 +16,11 @@ export class HomePage {
     if (this.display == '0' && input == '.') {
       this.display += input;
       this.newInput = false;
-    } else if (this.display == '0' || this.display == 'Fehler' || +this.display == Number.POSITIVE_INFINITY) {
+    } else if (['0', 'Fehler', Number.POSITIVE_INFINITY].includes(this.display)) {
       this.display = input;
       this.newInput=false;
     } else if (this.newInput && ['+', '-', '*', '/'].includes(input)) {
       this.display += input;
-      this.newInput = false;
-    } else if (this.newInput && input == '.') {
-      this.display = '0' + input;
       this.newInput = false;
     } else if (this.newInput) {
       this.display = input;
